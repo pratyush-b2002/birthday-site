@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 22nd Birthday Aishanee! 💕</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Floating backgrounds -->
+  <div class="hearts-container">
+    <div class="heart heart1">💖</div>
+    <div class="heart heart2">💕</div>
+    <div class="heart heart3">🌸</div>
+    <div class="heart heart4">💝</div>
+    <div class="heart heart5">💗</div>
+    <div class="heart heart6">🌺</div>
+    <div class="heart heart7">✨</div>
+    <div class="heart heart8">💫</div>
+  </div>
+  <div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Name Entry Page -->
+  <div id="name-entry-page" class="page active">
+    <div class="glass-container">
+      <div class="glass-card">
+        <h1 class="main-title">A Special Surprise</h1>
+        <h2 class="subtitle">✨ Awaits Someone Special ✨</h2>
+
+        <div class="input-container">
+          <label for="name-input" class="input-label">What's your name?</label>
+          <input type="text" id="name-input" class="form-control glass-input"
+                 placeholder="Enter your full name..." maxlength="50">
+          <div id="error-message" class="error-message hidden">
+            💕 This surprise is specially made for Aishanee 💕
+          </div>
+        </div>
+
+        <button id="enter-surprise" class="btn btn--primary glass-btn disabled" disabled>
+          <span class="btn-text">Enter My Surprise</span>
+          <span class="btn-sparkle">✨</span>
+        </button>
+
+        <div class="hint-text">
+          <p>✨ Enter "Aishanee" or "Aishanee Bhattacharya" ✨</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Birthday Surprise Page -->
+  <div id="birthday-page" class="page">
+    <div class="birthday-container">
+      <div class="floating-message">
+        <h1 class="birthday-title">Happy Birthday Aishanee!</h1>
+        <h2 class="birthday-subtitle">Here's to a beautiful 22!</h2>
+      </div>
+
+      <!-- Photo Reveal -->
+      <div class="photo-window-container">
+        <div id="photo-window" class="photo-window">
+          <div class="window-frame">
+            <div class="window-header">
+              <span class="window-title">💕 Your Special Moment 💕</span>
+              <div class="window-controls">
+                <span class="control-dot red"></span>
+                <span class="control-dot yellow"></span>
+                <span class="control-dot green"></span>
+              </div>
+            </div>
+            <div class="window-content">
+              <div class="photo-placeholder" id="photo-container">
+                <div class="click-to-open">
+                  <div class="click-icon">👆</div>
+                  <p>Click to reveal your photo</p>
+                </div>
+                <img id="birthday-image" class="birthday-photo hidden"
+                     src="website-image.jpg"
+                     alt="Special photo for Aishanee"
+                     loading="lazy"
+                     onerror="this.style.display='none'; document.getElementById('image-fallback').style.display='flex';">
+                <div id="image-fallback" class="image-fallback hidden">
+                  <div class="fallback-icon">🖼️</div>
+                  <p>Your beautiful photo will appear here</p>
+                  <small>Please make sure "website-image.jpg" is in the same folder</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music Player -->
+      <div class="music-player-container">
+        <div class="music-player glass-card">
+          <div class="player-header">
+            <div class="music-icon">🎵</div>
+            <span class="player-title">Birthday Song</span>
+          </div>
+          <div class="player-controls">
+            <button id="play-music" class="btn btn--primary play-btn">
+              <span class="play-icon">▶️</span>
+              <span class="play-text">Play Music</span>
+            </button>
+            <button id="stop-music" class="btn btn--secondary stop-btn hidden">
+              <span class="stop-icon">⏹️</span>
+              <span class="stop-text">Stop Music</span>
+            </button>
+          </div>
+          <div class="music-info">
+            <p>🎶 Click to start the celebration music 🎶</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Audio Element -->
+      <audio id="birthday-audio" src="birthday-music.mp3" preload="auto"></audio>
+
+      <!-- Back Button -->
+      <div class="back-container">
+        <button id="back-to-start" class="btn btn--outline glass-btn">
+          <span>🏠 Start Over</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
